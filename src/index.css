@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.section {
+  @apply flex;
+  @apply items-center;
+  @apply justify-center;
+  @apply gap-8;
+  @apply p-8;
+  @apply w-screen;
+  @apply h-screen;
+}
+
+.user-card {
+  @apply flex;
+  @apply flex-col;
+  @apply items-center;
+  @apply gap-2;
+  @apply p-4;
+  @apply shadow-lg;
+  @apply rounded-lg;
+  @apply border;
+  @apply w-80;
+}
+
+.profile-picture {
+  @apply rounded-full;
+  @apply w-48;
+}
+
+.name {
+  @apply text-2xl;
+  @apply font-bold;
+}
+
+.text-wrapper {
+  @apply flex;
+  @apply flex-col;
+  @apply items-center;
+}
+
+.role {
+  @apply font-medium;
+  @apply text-zinc-600;
+}
+
+.age {
+  @apply font-medium;
+  @apply text-zinc-500;
+}
+
+.actions-wrapper {
+  @apply flex;
+  @apply items-center;
+  @apply justify-between;
+  @apply gap-2;
+  @apply mt-6;
+  @apply w-full;
+}
+
+.button-ghost {
+  @apply border-2;
+  @apply border-teal-800;
+  @apply rounded;
+  @apply p-2;
+  @apply w-full;
+}
+
+.button-primary {
+  @apply border-2;
+  @apply border-teal-800;
+  @apply bg-teal-800;
+  @apply rounded;
+  @apply p-2;
+  @apply w-full;
+  @apply text-white;
+}
