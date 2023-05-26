@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import JohnDoe from "../assets/images/john-doe.jpeg";
 import JaneDoe from "../assets/images/jane-doe.jpeg";
 import PixelDoe from "../assets/images/pixel-doe.jpeg";
+import { getAgeFromBirthdate } from "../utils/date";
+import { openCallPhoneNumber, openSendEmail } from "../utils/contact";
 import "../index.css";
 
 const fetchUsers = () =>
@@ -57,17 +59,12 @@ const UserCards = () => {
       });
   }, []);
 
-  const getAgeFromBirthdate = (birthdate) => {
-    const birthday = +new Date(birthdate);
-    return ~~((Date.now() - birthday) / 31557600000);
-  };
-
   const handleCallClick = (phoneNumber) => {
-    window.open(`tel:${phoneNumber}`);
+    openCallPhoneNumber(phoneNumber);
   };
 
   const handleSendEmailClick = (email) => {
-    window.open(`mailto:${email}`);
+    openSendEmail(email);
   };
 
   return (
